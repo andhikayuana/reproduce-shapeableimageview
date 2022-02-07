@@ -24,4 +24,17 @@
         android:layout_height="100dp"
         android:src="@mipmap/ic_bus" />
 
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageView1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_bus" />
+
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/circularImageView1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@mipmap/ic_bus" />
+
+
 </LinearLayout>

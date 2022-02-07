@@ -9,6 +9,8 @@ import com.bumptech.glide.Glide
 import com.facebook.shimmer.Shimmer
 import com.facebook.shimmer.ShimmerDrawable
 import com.google.android.material.imageview.ShapeableImageView
+import com.mikhaellopez.circularimageview.CircularImageView
+import de.hdodenhof.circleimageview.CircleImageView
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -18,6 +20,8 @@ class MainActivity : AppCompatActivity() {
         val shapeableImageView = findViewById<ShapeableImageView>(R.id.shapeableImageView)
         val imageView = findViewById<ImageView>(R.id.imageView)
         val appCompatImageView = findViewById<AppCompatImageView>(R.id.appCompatImageView)
+        val circleImageView1 = findViewById<CircleImageView>(R.id.circleImageView1)
+        val circularImageView1 = findViewById<CircularImageView>(R.id.circularImageView1)
 
         //initialize shimmer
         val shimmer = Shimmer.AlphaHighlightBuilder()
@@ -37,6 +41,12 @@ class MainActivity : AppCompatActivity() {
 
         val shimmerDrawable3 = ShimmerDrawable()
         shimmerDrawable3.setShimmer(shimmer)
+
+        val shimmerDrawable4 = ShimmerDrawable()
+        shimmerDrawable4.setShimmer(shimmer)
+
+        val shimmerDrawable5 = ShimmerDrawable()
+        shimmerDrawable5.setShimmer(shimmer)
 
         //shapeableImageView
         Glide.with(applicationContext)
@@ -59,6 +69,21 @@ class MainActivity : AppCompatActivity() {
             .error(shimmerDrawable3)
             .into(appCompatImageView)
 
+
+        //circleImageView1
+        Glide.with(applicationContext)
+            .load("https://pbs.twimg.com/profile_images/1223572104400031744/dNUw2Un6_400x400.jpg")
+            .placeholder(shimmerDrawable4)
+            .error(shimmerDrawable4)
+            .into(circleImageView1)
+
+
+        //circleImageView1
+        Glide.with(applicationContext)
+            .load("https://pbs.twimg.com/profile_images/1223572104400031744/dNUw2Un6_400x400.jpg")
+            .placeholder(shimmerDrawable5)
+            .error(shimmerDrawable5)
+            .into(circularImageView1)
 
     }
 
